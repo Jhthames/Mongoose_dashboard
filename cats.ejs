@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Creatures</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Here lies the wildones!</h1>
+        <% for (var animal of all_animals) { %>
+            
+            <div><h4><%= animal.name %></h4></div>
+            <p>"<%= animal.myth %>"</p> <a href="/cats/delete/<%= animal.id %>">Delete</a> <a href="/cats/edit/<%= animal.id %>">Edit</a>
+            <% } %>
+            <br><a href="/">Add a creatures</a>
