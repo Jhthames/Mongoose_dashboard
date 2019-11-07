@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mythical Creatures</title>
+</head>
+<body>
+    <div class="container-fluid">
+        
+            <% if(messages.registration) { %>
+                <% for (var x of messages.registration) { %>
+                    <h3><%= x %></h3>
+                <% } %>
+            <% } %>
+
+        <h1>Creature Dashboard</h1>
+            <form action='/cats' method='post'>
+                <p>Animal: <input type='text' id='name' name='name'></p>
+                <p>Myth: <textarea rows="4" cols="50" name='myth'></textarea></p>
+                <input type="submit" value="Add my quote!"><br>
+                <a href="/cats">Skip to all creatures</a>
+            </form>
+    </div>
+</body>
+</html>
